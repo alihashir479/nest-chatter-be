@@ -1,0 +1,1 @@
+export const MESSAGED_CREATED = 'messageCreated'
