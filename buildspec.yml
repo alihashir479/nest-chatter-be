@@ -2,8 +2,13 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
+    runtime_versions:
       nodejs: 18
+    commands:
+    - npm i -g npm
+    - npm i -g @nestjs/cli
+    - npm i -g typescript
+  pre_build:
     commands:
     - npm install
   build:
@@ -11,8 +16,9 @@ phases:
     - npm run build
   post_build:
     commands:
-    - echo "Build completed on `date`"
+    - echo 'build completed'
+
 
 artifacts:
-  files:
-    - '**/*'
+  files: 
+    '**/*'
